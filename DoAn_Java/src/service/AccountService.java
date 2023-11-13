@@ -12,7 +12,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class AccountService {
-    Menu menu = new Menu();
     Utils utils = new Utils();
     public static boolean emailValid(String email) {
         String emailRegex = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.com$";
@@ -28,6 +27,7 @@ public class AccountService {
     }
 
     public void login(Scanner scanner, ArrayList<Account> accounts) {
+        Menu menu = new Menu();
         System.out.println("Nhập username: ");
         String userName = scanner.nextLine();
         System.out.println("Nhập password: ");
